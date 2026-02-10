@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A basic HTML5 website template">
+    <title>Basic HTML5 Template</title>
+
+    <style>
+        /* 1. Reset and Basic Variables */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 2. Layout Components */
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        /* Container to center content */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on mobile */
+            gap: 20px;
+            padding: 20px 0;
+            flex: 1; /* Pushes footer down */
+        }
+
+        main {
+            flex: 3; /* Takes up 3/4 of the space */
+            background: var(--white);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        aside {
+            flex: 1; /* Takes up 1/4 of the space */
+            background: var(--white);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+
+        /* 3. Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>My Website Name</h1>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<div class="container content-wrapper">
+
+    <main>
+        <article>
+            <h2>Welcome to My Website</h2>
+            <p>This is a standard paragraph. HTML5 makes it easy to structure your content. The layout you see here uses <strong>CSS Flexbox</strong>.</p>
+            <p>You can duplicate this paragraph to add more content. The footer will automatically stay at the bottom of the page.</p>
+
+            <h3>Subheading Here</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+            <ul>
+                <li>Feature One</li>
+                <li>Feature Two</li>
+                <li>Feature Three</li>
+            </ul>
+        </article>
+    </main>
+
+    <aside>
+        <h3>Sidebar</h3>
+        <p>This is an aside section. It's great for:</p>
+        <ul>
+            <li>Recent Posts</li>
+            <li>Categories</li>
+            <li>Ads or Bio</li>
+        </ul>
+    </aside>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; Stars of Night </p>
+    </div>
+</footer>
+
+</body>
+</html>
